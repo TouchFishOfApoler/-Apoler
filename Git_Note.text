@@ -87,3 +87,8 @@ PS:
 	origin ————远程仓库的意思，如果这个仓库是远程的那么必须使用这个选项
 	master ————提交本地master分支仓库
 
+Github常用：
+git push origin master
+git clone -b 要拉的分支名 git@github.com:TouchFishOfApoler/Notes.git
+
+
