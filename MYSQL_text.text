@@ -315,4 +315,4 @@ select emp_no,sum(salary) from salaries group by emp_no having emp_no = (select 
 排序：如果向对用union(并)组合的查询select语句， 使用order by子句来排序，不必每个select语句的后边都使用order by，这是错误的，只需要在最后一条select语句之后用order by 排序即可对整个union(并)组合的查询select语句排序。
 
 
-
+#测试
