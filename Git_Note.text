@@ -1,5 +1,5 @@
 如果git init初始化错了地方，可以在该初始化目录下使用rm -rf .git删除“.git”文件即可。
-
+如果git log后操作不了，输入“q”即可退出。
 
 Git的基本组成框架：
 Workspace:开发者工作区
@@ -49,5 +49,36 @@ git reset 可回退版本哈希id 回退的文件名  	————将指定文�
 git reflog
 
 
+git rm 文件名，删除文件后，只是将删除操作放入缓存区，这时可以使用git reset重置缓存区操作，然后再使用git checkout 文件名，就可以将文件取消操作。
 
+ 
+创建分支：
+
+git checkout -b 分支名   	————创建一个分支，创建完成会自动切换过去
+git branch			————查看当前属于哪个分支（也就是HEAD
+的指向）
+git branch 分支名		————创建分支
+git checkout 分支名		————切换分支
+git checkout 文件名		————放弃对文件的缓存区操作
+
+合并分支：
+
+当在分支创建文件等等操作后，想将分支提交至master，只需git checkout master并执行git merge 分支名，即可将分支合并到master。
+
+git branch -a 			————查看所有分支
+git branch -D 分支名		————删除本地分支
+git push origin --delete 分支名	————删除远程分支
+
+
+Github的使用：
+1、在本地创建一个ssh的key，因为github是使用的ssh服务进行通讯的
+2、ssh-keygen -t rsa -C "邮箱"
+PS: -t 指定密钥类型，默认是rsa
+    -C 设置注释文字，比如邮箱
+    -f 指定密钥文件存储文件名，一般默认，让其存储到默认路径和默认文件名
+3、回车（使用默认文件名）、回车（设置push提交时的密码，回车则空密码）、回车（再次输入密码，回车则空密码）
+4、会生成2个密钥文件，一个是私密的，一个是公共密钥，只有公共密钥可以告诉别人。
+5、在github中添加公共密钥
+6、将本地仓库关联到远程仓库，git remote add origin github仓库里的ssh
+7、推送，git push -u origin master
 
