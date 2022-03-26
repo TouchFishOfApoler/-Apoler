@@ -81,4 +81,9 @@ PS: -t 指定密钥类型，默认是rsa
 5、在github中添加公共密钥
 6、将本地仓库关联到远程仓库，git remote add origin github仓库里的ssh
 7、推送，git push -u origin master
+PS:
+	push  ————将本地仓库与远程仓库合并
+	-u    ————将master的分支也提交上去
+	origin ————远程仓库的意思，如果这个仓库是远程的那么必须使用这个选项
+	master ————提交本地master分支仓库
 
